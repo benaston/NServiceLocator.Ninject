@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceLocator.Ninject", "NServiceLocator.Ninject\NServiceLocator.Ninject.csproj", "{10C07A38-853C-4BED-9857-3D5F62AB9F70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceLocator.Ninject.Test.Fast", "NServiceLocator.Ninject.Test.Fast\NServiceLocator.Ninject.Test.Fast.csproj", "{683AD8F9-EBD6-4FF3-A972-6F1992A8392A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10C07A38-853C-4BED-9857-3D5F62AB9F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10C07A38-853C-4BED-9857-3D5F62AB9F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10C07A38-853C-4BED-9857-3D5F62AB9F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10C07A38-853C-4BED-9857-3D5F62AB9F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10C07A38-853C-4BED-9857-3D5F62AB9F70}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{10C07A38-853C-4BED-9857-3D5F62AB9F70}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{683AD8F9-EBD6-4FF3-A972-6F1992A8392A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683AD8F9-EBD6-4FF3-A972-6F1992A8392A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683AD8F9-EBD6-4FF3-A972-6F1992A8392A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683AD8F9-EBD6-4FF3-A972-6F1992A8392A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{683AD8F9-EBD6-4FF3-A972-6F1992A8392A}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{683AD8F9-EBD6-4FF3-A972-6F1992A8392A}.Staging|Any CPU.Build.0 = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
