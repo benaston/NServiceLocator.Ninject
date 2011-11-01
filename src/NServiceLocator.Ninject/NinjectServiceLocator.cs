@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using global::Ninject;
+    using global::Ninject.Activation;
     using global::Ninject.Modules;
     using NServiceLocator;
 
@@ -10,7 +11,7 @@
     /// Example usage:
     /// <![CDATA[var serviceLocator = NinjectServiceLocator<MyNinjectModule>.GetInstance();]]>
     /// </summary>
-    public class NinjectServiceLocator<TServiceLocatorModule> : IServiceLocator where TServiceLocatorModule : NinjectModule, new()
+    public class NinjectServiceLocator<TServiceLocatorModule> : IServiceLocator<IContext> where TServiceLocatorModule : NinjectModule, new()
     {
         private static readonly NinjectServiceLocator<TServiceLocatorModule> Instance = new NinjectServiceLocator<TServiceLocatorModule>();
 
@@ -18,7 +19,7 @@
 
         public IKernel Kernel { get; private set; }
 
-        public static IServiceLocator GetInstance(){ return Instance; }
+        public static IServiceLocator<IContext> GetInstance(){ return Instance; }
         
         private static IKernel CreateKernel()
         {
@@ -34,6 +35,16 @@
         {
             Kernel.Bind<T>().ToSelf();
         }
+
+        public void BindToMethod<T>(Func<IContext,T> func)
+        {
+            Kernel.Bind<T>().ToMethod(func);
+        }
+
+        //public void BindToMethod(Type serviceType, Func<IContext, > func)
+        //{
+        //    Kernel.Bind(serviceType).ToMethod(func);
+        //}
 
         public void BindToInterface<TImplementation, TInterface>(TImplementation type, TInterface tInterface) where TImplementation : TInterface where TInterface : Type
         {

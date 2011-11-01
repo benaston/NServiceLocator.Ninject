@@ -49,8 +49,9 @@
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="NServiceLocator">
-      <HintPath>..\packages\NServiceLocator.1.0.4293.1115\lib\net40\NServiceLocator.dll</HintPath>
+    <Reference Include="NServiceLocator, Version=1.0.4317.39679, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NServiceLocator.1.0.4317.39679\lib\net40\NServiceLocator.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,7 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="NServiceLocator.Ninject.nuspec" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
